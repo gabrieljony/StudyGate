@@ -1,16 +1,22 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement, incrementByAmount } from './store/counterSlice'
+import React from 'react'
+import AppRoutes from './routes/AppRoutes'
 
 export default function App() {
-  const count = useSelector((state) => state.counter.value)
-  const dispatch = useDispatch()
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Contador: {count}</h1>
-      <button onClick={() => dispatch(increment())}>+1</button>
-      <button onClick={() => dispatch(decrement())}>-1</button>
-      <button onClick={() => dispatch(incrementByAmount(5))}>+5</button>
+    <div>
+      {/* Aqui você pode colocar header, menu ou layout fixo */}
+      <header style={{ padding: '10px', backgroundColor: '#eee' }}>
+        <h1>Meu App React</h1>
+      </header>
+
+      {/* Componente que controla todas as rotas */}
+      <AppRoutes />
+
+      {/* Footer opcional */}
+      <footer style={{ padding: '10px', textAlign: 'center', marginTop: '50px' }}>
+        © 2025 Meu App
+      </footer>
     </div>
   )
 }
