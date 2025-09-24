@@ -1,21 +1,21 @@
-import React from 'react'
 import AppRoutes from './routes/AppRoutes'
+import './App.css'
 
 export default function App() {
 
   return (
-    <div>
+    <div className="app-container">
       {/* Aqui você pode colocar header, menu ou layout fixo */}
       <header style={{ padding: '10px', backgroundColor: '#eee' }}>
-        <h1>Meu App React</h1>
+        <h1>StudyGate</h1>
       </header>
-
-      {/* Componente que controla todas as rotas */}
-      <AppRoutes />
-
+      <div className="content">
+        {/* Componente que controla todas as rotas */}
+        <AppRoutes />
+      </div>
       {/* Footer opcional */}
-      <footer style={{ padding: '10px', textAlign: 'center', marginTop: '50px' }}>
-        © 2025 Meu App
+      <footer className="footer">
+        © 2025 StudyGate
       </footer>
     </div>
   )
