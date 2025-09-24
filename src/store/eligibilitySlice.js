@@ -1,12 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { fetchEligibility } from '../api/eligibilityApi' // <- import da função da API
 
 // Mock da chamada AJAX para verificar elegibilidade
+// export const checkEligibility = createAsyncThunk('eligibility/check', async () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({ eligibility: false }) // altere para false para testar bloqueio
+//     }, 5000)
+//   })
+// })
+
+// Chamada AJAX para verificar elegibilidade via API
 export const checkEligibility = createAsyncThunk('eligibility/check', async () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({ eligibility: false }) // altere para false para testar bloqueio
-    }, 5000)
-  })
+// Retorna a resposta da API
+const response = await fetchEligibility()
+return response
 })
 
 const eligibilitySlice = createSlice({
