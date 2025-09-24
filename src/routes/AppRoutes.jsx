@@ -1,15 +1,13 @@
 // src/routes/AppRoutes.jsx
 
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import About from '../pages/About'
-import Eligibility from '../pages/Eligibility'
 import ProtectedRoute from './ProtectedRoute'
+import ReduxRoadmap from '../pages/ReduxRoadmap'
 
 export default function AppRoutes() {
   return (
-    <Router>
       <Routes>
 
         {/* Rotas protegidas */}
@@ -31,9 +29,15 @@ export default function AppRoutes() {
           }
         />
 
+        <Route
+            path="/redux-roadmap"
+            element={
+                <ReduxRoadmap />
+            }
+        />
+
         {/* Rota coringa */}
         <Route path="*" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       </Routes>
-    </Router>
   )
 }

@@ -1,14 +1,13 @@
 import AppRoutes from './routes/AppRoutes'
 import './App.css'
+import Header from './components/Header'
 
 export default function App() {
 
   return (
     <div className="app-container">
       {/* Aqui você pode colocar header, menu ou layout fixo */}
-      <header style={{ padding: '10px', backgroundColor: '#eee' }}>
-        <h1>StudyGate</h1>
-      </header>
+      <Header />
       <div className="content">
         {/* Componente que controla todas as rotas */}
         <AppRoutes />

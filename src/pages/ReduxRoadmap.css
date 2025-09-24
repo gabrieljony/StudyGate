@@ -1,0 +1,39 @@
+.roadmap-container {
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.roadmap-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.roadmap-list li {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.roadmap-list input {
+  margin-right: 10px;
+}
+
+.roadmap-controls button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.roadmap-controls button:hover {
+  background-color: #0056b3;
+}
