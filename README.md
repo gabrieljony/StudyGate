@@ -1,10 +1,11 @@
-# Iniciando com Create React App
+# StudyGate
 
-Este projeto foi criado com [Create React App](https://github.com/facebook/create-react-app) e utiliza **React 18**, **React Router DOM** para navegação e **Redux Toolkit** para gerenciamento de estado.
+StudyGate é um projeto de estudo em React com Redux que simula um sistema de verificação de elegibilidade. Ele protege rotas da aplicação, permitindo acesso apenas a usuários elegíveis, e demonstra conceitos de roteamento protegido, gerenciamento de estado assíncrono e componentes de feedback de carregamento.
 
 ## Estrutura do Projeto
 
 - `src/`
+  - `api/` → Funcionalidade para chamada a API (ex.: `eligibilityApi.js`).
   - `components/` → Componentes reutilizáveis (ex.: `LoadingSpinner`).
   - `pages/` → Páginas do aplicativo (ex.: `Home`, `About`, `Eligibility`).
   - `routes/` → Configuração das rotas da aplicação (`AppRoutes.jsx`, `ProtectedRoute.jsx`).
